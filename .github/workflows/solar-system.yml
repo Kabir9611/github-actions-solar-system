@@ -144,5 +144,5 @@ jobs:
       needs: dev-deploy
       uses: Kabir9611/github-actions-solar-system/.github/workflows/reusable-workflow.yml@feature/workflow 
       with:
-        ingress-url: ${{ needs.dev-deploy.outputs.INGRESS_IP}}
+        ingress-url: ${{ needs.dev-deploy.outputs.APP_INGRESS_URL }}
       

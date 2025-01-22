@@ -139,3 +139,10 @@ jobs:
 
         - name: display yaml files
           run: cat kubernetes/development/*.yaml
+    
+    integration-testing:
+      needs: dev-deploy
+      uses: ./.github/workflows/reusable-workflow.yml 
+      with:
+        ingress-url: ${{ needs.dev-deploy.outputs.INGRESS_IP}}
+      

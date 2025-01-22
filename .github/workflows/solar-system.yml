@@ -142,7 +142,7 @@ jobs:
     
     integration-testing:
       needs: dev-deploy
-      uses: ./.github/workflows/reusable-workflow.yml 
+      uses: Kabir9611/github-actions-solar-system/.github/workflows/reusable-workflow.yml@feature/workflow 
       with:
         ingress-url: ${{ needs.dev-deploy.outputs.INGRESS_IP}}
       
